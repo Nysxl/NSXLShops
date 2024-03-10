@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'com.internal.nysxl'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral() // Primary repository
+    google()
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' } // For Spigot and Minecraft dependencies
+    maven { url 'https://libraries.minecraft.net/' } // Minecraft-specific libraries
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' } // For snapshot versions
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://jitci.com/gh/Nysxl/NysxlUtilities' }
+}
+
+dependencies {
+    implementation 'org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT'
+    implementation 'com.google.guava:guava:30.1-jre' // Update Guava version
+    implementation 'com.google.code.gson:gson:2.8.6' // Update Gson version
+    implementation 'org.joml:joml:1.10.2' // Update JOML version
+    implementation 'net.md-5:bungeecord-chat:1.16-R0.4' // Update BungeeCord version, adjust as needed
+    implementation 'org.yaml:snakeyaml:1.28' // Update SnakeYAML version
+    implementation 'com.github.Nysxl:NysxlUtilities:master-SNAPSHOT'
+    implementation 'com.github.MilkBowl:VaultAPI:master-SNAPSHOT'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+        }
+    }
+}

@@ -1,0 +1,15 @@
+name: NSXLShops
+version: 1
+api-version: 1.20
+main: com.internal.nysxl.NSXLShops.main
+depend: [NysxlUtilities, Vault]
+commands:
+  NSXLCreateShop:
+    description: Creates a shop.
+    usage: /NSXLCreateShop [SHOP NAME]
+  OpenShop:
+    description: Opens a shop with a given name.
+    usage: /OpenShop [SHOP NAME]
+  AddItem:
+    description: adds the item your holding to the shop
+    usage: /OpenShop [SHOP NAME] [ITEM_ID] [BUY_PRICE] [SELL_PRICE]
